@@ -1,9 +1,8 @@
 ![microverse-logo](https://img.shields.io/badge/Microverse-blueviolet)
 
-# Decode Morse code Ruby Practice
+# OOP school library
 
-> This is a practice project to understand better how ruby language works.
-
+> In this project, I will start building my school library app. In this initial step, I will implement the classes to represent students and teachers.
 ## Built With
 
 - Ruby
