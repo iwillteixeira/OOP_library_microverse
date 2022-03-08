@@ -1,8 +1,10 @@
 #!/usr/bin/env ruby
+require './corrector'
 class Person
   def initialize(age:, name: 'Unknown', parent_permission: true)
     @id = Random.rand(1..1000)
-    @name = name
+    @corrector = Corrector.new
+    @name = validate_name(name)
     @age = age
     @parent_permission = parent_permission
   end
@@ -20,4 +22,11 @@ class Person
   def can_use_services?
     is_of_age? || @parent_permission
   end
+
+  def validate_name(name)
+    @corrector.correct_name(name)
+  end
 end
+
+person = Person.new(age: 18, name: 'jaoa')
+p person.name
