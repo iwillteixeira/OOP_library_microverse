@@ -6,6 +6,7 @@ class Corrector
     else
       name.capitalize
     end
+    name.capitalize[0..10]
   end
-  name.capitalize[0..10]
+  
 end
