@@ -3,11 +3,11 @@ require './person'
 require './student'
 require './classroom'
 require './corrector'
+require './book'
+require './rental'
 
 donald = Student.new(age: 18, classroom: 'none', name: 'Donald')
-math = Classroom.new('Math')
-
-p donald.classroom
-donald.classroom = math
-p donald.classroom.label
-p math.students.first.name
+p donald.play_hooky
+dracula = Book.new('robinhood', 'dracula')
+donald.add_rental(dracula, '01-02-2021')
+p donald.rentals.first.book
