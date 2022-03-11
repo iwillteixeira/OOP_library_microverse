@@ -1,5 +1,7 @@
 #!/usr/bin/env ruby
-require './app.rb'
+# rubocop:disable Metrics/MethodLength
+# rubocop:disable Metrics/CyclomaticComplexity
+require './app'
 
 def main
   app = App.new
@@ -15,7 +17,6 @@ def main
     puts '5 - Create a rental'
     puts '6 - List all rentals for a given person id'
     puts '7 - Exit'
-
     option = gets.chomp
 
     case option
@@ -40,6 +41,8 @@ def main
       puts
     end
   end
+  # rubocop:enable Metrics/MethodLength
+  # rubocop:enable Metrics/CyclomaticComplexity
 end
 
 main
